@@ -11,10 +11,10 @@ switch direc{
 var currentx = x/tileWidth;
 var currenty = y/tileHeight;
 roomID = ds_grid_get(grid,currentx,currenty); 
-if roomID > 0{// if this room does exist 
+//if roomID > 0{// if this room does exist 
 	newdir = wrap(direc+2, 0,3);
 	//var rooms = instance_position(x,y,Room);
 	if !checkWalls(roomID,newdir){ //check walls of that tile
 		moveDir(newdir);// move back
 	}
-}
+//}

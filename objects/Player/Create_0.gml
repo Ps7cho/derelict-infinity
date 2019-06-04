@@ -16,7 +16,9 @@ headScale = 5;
 armorScale = 2;
 
 totalArmor = 0;
-
+fill = 0;
+fall = false;
+QuickTime = false;
 
 
 

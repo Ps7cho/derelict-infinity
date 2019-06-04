@@ -24,3 +24,7 @@ camera_set_view_pos(view_camera[position],x-720,y-540);
 // Character selection
 
 
+if keyboard_check_pressed(ord("Q")){
+	QuickTime = !QuickTime;	
+	if QuickTime fill = 0;
+}

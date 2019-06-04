@@ -15,7 +15,7 @@ yy2 = view_yport[position]+view_hport[position];
 
 
 draw_set_alpha(0.2);
-
+#region draw portrait and dashboard
 switch (position){
 	case 0: draw_roundrect_color(x1,y1,x2,y2,color,color,false);
 			//draw_roundrect_color(x1,y1,x2,y2,c_black,c_black,true);
@@ -73,3 +73,23 @@ switch (position){
 			break;
 }
 
+#endregion
+
+// draw quicktime event
+draw_rectangle_color(180,140,300,155,c_black,color,c_black,c_black, false);
+draw_healthbar(180,140,300, 155,fill,c_white,color,c_purple,0,false, true);
+if QuickTime{
+	if fill = 100 {
+		fall = true;
+	}else if fill = 0{
+		fall = false	
+	}
+	if fall{
+		fill = clamp(fill-max(1,fill/6), 0, 100);
+		}else{
+		fill = clamp(fill+max(1,fill/6), 0, 100);
+	}
+}else{
+	font_set(fnt_small,fa_left,fa_left);
+	draw_text(310, 140, floor((fill*fill*fill*fill)/1000000));
+}

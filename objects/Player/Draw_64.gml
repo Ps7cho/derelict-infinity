@@ -91,5 +91,5 @@ if QuickTime{
 	}
 }else{
 	font_set(fnt_small,fa_left,fa_left);
-	draw_text(310, 140, floor((fill*fill*fill*fill)/1000000));
+	draw_text(310, 140, floor((fill*fill*fill*fill)/1000000));//quadratic ^4
 }
